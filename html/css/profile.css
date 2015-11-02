@@ -1,0 +1,92 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+body{
+    font-size:1.1em;
+    background-color:#FFF;
+    line-height:1.25;
+    font-family: Georgia,Times,"Times New Roman",serif;
+}
+.content{
+    padding-top:2em;
+    width:60%;
+    margin:0 auto;
+}
+.profileImg{
+    width: 12.5em;
+}
+.profileBoundery{
+    float:right;
+    margin-top:1em;
+    border-radius:50%;
+    width:12.5em;
+    height:12.5em;
+    overflow:hidden;
+    border:2px solid #333;
+}
+.grade{
+    font-weight:200;
+    font-family: Gotham,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+h2,h3{
+    font-family: Gotham, "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+header{
+    background-color:#333399;
+    color:white;
+    width:auto;
+    line-height:4em;
+    padding-left:20%;
+    padding-right:20%;
+}
+header .access{
+    font-size:0.8em;
+}
+header .edit{
+    float:right;
+}
+
+header .SearchTable{
+    float:right;
+}
+
+.HouseTable button{
+    color:white;
+    border-radius:2px;
+    font-size:0.9em;
+    padding:0.5em;
+    
+}
+
+.HouseTable .we{
+    background-color:#555;
+    border:2px solid black;
+}
+
+.HouseTable .ca{
+    background-color:#E14C4C;
+    border:2px solid #FF2D2D;
+}
+
+.HouseTable .yo{
+    background-color:#4C6AE1;
+    border:2px solid #2D62FF;
+}
+
+.HouseTable .wi{
+    background-color:#E1C94C;
+    border:2px solid #D0B634;
+}
+
+.House{
+    font-weight:200;
+    font-family: Gotham,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size:1em;
+    padding-bottom:1em;
+}
+.points{
+    font-weight:200;
+    font-family: Gotham,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+    font-size:1em;
+}
