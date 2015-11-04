@@ -97,7 +97,7 @@ header .SearchTable{
     border:2px solid #D0B634;
 }
 
-.House{
+.Day{
     font-weight:200;
     font-family: Gotham,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
     font-size:1em;
@@ -117,24 +117,4 @@ header .SearchTable{
 
 .clubs h3{
     margin-top:1em;
-}
-
-.Day{
-    font-weight:200;
-    font-family: Gotham,"Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-    font-size:1em;
-}
-
-.clubDescription{
-    float:right;
-    margin-top:1em;
-    border-radius:5%;
-    width:12.5em;
-    height:12.5em;
-    overflow:hidden;
-    border:2px solid #333;
-}
-
-.addClub{
-    
 }
