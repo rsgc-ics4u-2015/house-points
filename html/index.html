@@ -9,46 +9,40 @@
     - The Previous Year's House Cup Winner
     - A Login: Pin at the bottom of the page
 -->
-
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>RSGC House Points</title>
         <link rel="stylesheet" href="css/profile.css" type="text/css"/>
     </head>
-    
-    	<script>
-    
-	    </script>
-    
     <body>
-        <!-- Header of our home page uses the 'header' class, which makes a body 
-        at the top of the screen -->
         <header>
         <h3 text-align = "center" >Royal St. Georges College House Point Tracker</h3>
         <table class= "SearchTable">
             <tr>
 				<td>Name: </td>
-				<td> <input type= "text" name="name"/></td>
+				<td> <input type= "text" name="name"></input></td>
 				<td><button  class = "searchButton" onclick = "search()">SEARCH</button></td>
 			</tr>
         </table>
         </header>
         <div class = "content">
-        <table class = "HouseTable">
+        <table class = "HouseTable House">
             <tr>
-                <td class = "center"><button onclick = "house()" class = "we">WEST</button></td>
-                <td class = "center"><button onclick = "house()" class = "ca">CANT</button></td>
-                <td class = "center"><button onclick = "house()" class = wi>WINCH</button></td>
-                <td class = "center"><button onclick = "house()" class = "yo">YORK</button></td>
+                <td class = "center"><button onclick = "house()" class="we">WEST</button></td>
+                <td class = "center"><button onclick = "house()" class="ca">CANT</button></td>
+                <td class = "center"><button onclick = "house()" class="wi">WINCH</button></td>
+                <td class = "center"><button onclick = "house()" class="yo">YORK</button></td>
             </tr>
         </table>
         <h2>Current House Standing:</h2>
         <p class="standings" onload ="houseStandings()">
-            CANT <br>
-            WINCH <br>
-            YORK <br>
-            WEST
+            <ol class="House">
+                <li>CANT</li>
+                <li>WINCH</li>
+                <li>YORK</li>
+                <li>WEST</li>
+            </ol>
         </p>
         <table class= "LoginTable">
             <tr>

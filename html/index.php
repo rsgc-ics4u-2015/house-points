@@ -11,7 +11,6 @@ $user = "rsgc_edwards_g";
 $pass = "";
 $db = "mydb";
 $port = 3306;
-
 $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
 
 // perform a query to make sure it's working
