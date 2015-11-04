@@ -15,6 +15,15 @@
         <title>RSGC House Points</title>
         <link rel="stylesheet" href="css/profile.css" type="text/css"/>
     </head>
+    <script>
+        function $('id'){
+           return document.getElementbyID(id);
+        }
+        function login(){
+            $("code").
+            
+        }
+    </script>
     <body>
         <header>
         <h3 text-align = "center" >Royal St. Georges College House Point Tracker</h3>
@@ -48,8 +57,8 @@
             <tr>
 				<td>Pin: </td>
 				<form action="login.php">
-				    <td><input type= "text" name="name"/></td>
-				    <td><input type="submit" value="Submit"></td>
+				    <td><input type= "text" name="name" id="code"></td>
+				    <td><input type="submit" value="Submit" onclick = "login()"></td>
 				</form>
 			</tr>
         </table>
