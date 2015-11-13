@@ -105,7 +105,7 @@ INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `
 INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (2, 'Cameron', 'Raymond', 'Winchester', 3000, 12);
 INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (3, 'Jamie', 'Linsdell', 'Westminster', 2500, 12);
 INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (4, 'Christien', 'Kelly', 'Westminster', 4990, 12);
-INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (5, 'Ross', 'Hill', 'Westminster', 880, 12);
+INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (5, 'Ross', 'Hill', 'Westminster', 8800, 12);
 
 COMMIT;
 
