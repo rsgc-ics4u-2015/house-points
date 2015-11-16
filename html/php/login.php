@@ -4,6 +4,6 @@
  // $query = "SELECT * FROM code;";
   //$result = mysqli_query($connection, $query);
   
-  if()
+//   if()
   
 ?>

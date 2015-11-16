@@ -3,7 +3,6 @@
 <!-- Purpose: After a teacher has logged in they will be directed to this page.
   - List of Clubs
   - Teacher picture
-Author: Cam R
 Date:Oct 20
 -->
 <html lang="en">
@@ -18,7 +17,7 @@ Date:Oct 20
     <?php
   // set database connection parameters
   $host = "127.0.0.1";
-  $user = "rsgc_edwards_g";
+  $user = "rsgc_hill_r";
   $pass = "";
   $db = "housepoints";
   $port = 3306;

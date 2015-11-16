@@ -9,7 +9,7 @@
         <?php
   // set database connection parameters
   $host = "127.0.0.1";
-  $user = "rsgc_edwards_g";
+  $user = "rsgc_hill_r";
   $pass = "";
   $db = "housepoints";
   $port = 3306;
