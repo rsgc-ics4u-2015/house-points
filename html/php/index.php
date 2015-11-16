@@ -13,7 +13,7 @@
     <head>
         <meta charset="utf-8" />
         <title>RSGC House Points</title>
-        <link rel="stylesheet" href="css/profile.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/profile.css" type="text/css"/>
     </head>git 
     <script>
         function $(id){

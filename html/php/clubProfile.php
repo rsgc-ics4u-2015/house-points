@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>RSGC House Points</title>
-        <link rel="stylesheet" type="text/css" href="css/profile.css">
+        <link rel="stylesheet" href="../css/profile.css" type="text/css"/>
     </head>
     <body>
         

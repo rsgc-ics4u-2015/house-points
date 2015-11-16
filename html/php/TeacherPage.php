@@ -11,7 +11,7 @@ Date:Oct 20
     <title>
       PntTrckr
       </title>
-      <link href="css/profile.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../html/css/profile.css" type="text/css"/>
   </head>
   <body>
     <?php
