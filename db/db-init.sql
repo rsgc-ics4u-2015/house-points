@@ -28,16 +28,33 @@ CREATE SCHEMA IF NOT EXISTS `housepoints` DEFAULT CHARACTER SET utf8 ;
 USE `housepoints` ;
 
 -- -----------------------------------------------------
+-- Table `housepoints`.`house`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `housepoints`.`house` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `short_name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `housepoints`.`student`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `housepoints`.`student` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
-  `house` VARCHAR(45) NOT NULL,
   `house_point_total` INT NOT NULL,
   `grade` INT NOT NULL,
-  PRIMARY KEY (`id`))
+  `house_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `house_id`),
+  INDEX `fk_student_house1_idx` (`house_id` ASC),
+  CONSTRAINT `fk_student_house1`
+    FOREIGN KEY (`house_id`)
+    REFERENCES `housepoints`.`house` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -97,15 +114,28 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
+-- Data for table `housepoints`.`house`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `housepoints`;
+INSERT INTO `housepoints`.`house` (`id`, `name`, `short_name`) VALUES (1, 'Canterbury', 'Cant');
+INSERT INTO `housepoints`.`house` (`id`, `name`, `short_name`) VALUES (2, 'Westminster', 'West');
+INSERT INTO `housepoints`.`house` (`id`, `name`, `short_name`) VALUES (3, 'Winchester', 'Winch');
+INSERT INTO `housepoints`.`house` (`id`, `name`, `short_name`) VALUES (4, 'York', 'York');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
 -- Data for table `housepoints`.`student`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `housepoints`;
-INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (1, 'Graeme', 'Edwards', 'Canterbury', 10000, 12);
-INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (2, 'Cameron', 'Raymond', 'Winchester', 3000, 12);
-INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (3, 'Jamie', 'Linsdell', 'Westminster', 2500, 12);
-INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (4, 'Christien', 'Kelly', 'Westminster', 4990, 12);
-INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house`, `house_point_total`, `grade`) VALUES (5, 'Ross', 'Hill', 'Westminster', 8800, 12);
+INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house_point_total`, `grade`, `house_id`) VALUES (1, 'Graeme', 'Edwards', 10000, 12, DEFAULT);
+INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house_point_total`, `grade`, `house_id`) VALUES (2, 'Cameron', 'Raymond', 3000, 12, DEFAULT);
+INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house_point_total`, `grade`, `house_id`) VALUES (3, 'Jamie', 'Linsdell', 2500, 12, DEFAULT);
+INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house_point_total`, `grade`, `house_id`) VALUES (4, 'Christien', 'Kelly', 4990, 12, DEFAULT);
+INSERT INTO `housepoints`.`student` (`id`, `first_name`, `last_name`, `house_point_total`, `grade`, `house_id`) VALUES (5, 'Ross', 'Hill', 880, 12, DEFAULT);
 
 COMMIT;
 
