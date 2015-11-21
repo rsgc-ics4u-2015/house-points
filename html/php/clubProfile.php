@@ -6,17 +6,7 @@
     </head>
     <body>
         
-        <?php
-  // set database connection parameters
-  $host = "127.0.0.1";
-  $user = "rsgc_hill_r";
-  $pass = "";
-  $db = "housepoints";
-  $port = 3306;
-  
-  // establish the connection
-  $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
-  ?>
+        <?php include 'db.php'; ?>
         
         <header></header>
         <div class="content">
