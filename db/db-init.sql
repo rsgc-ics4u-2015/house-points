@@ -109,6 +109,23 @@ CREATE TABLE IF NOT EXISTS `housepoints`.`student_participates_in_Activity` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `housepoints`.`house_has_point_total`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `housepoints`.`house_has_point_total` (
+  `house_id` INT NOT NULL,
+  `date` DATE NOT NULL,
+  `point_total` INT NOT NULL,
+  PRIMARY KEY (`house_id`, `date`),
+  INDEX `fk_house_has_house_point_total_house1_idx` (`house_id` ASC),
+  CONSTRAINT `fk_house_has_house_point_total_house1`
+    FOREIGN KEY (`house_id`)
+    REFERENCES `housepoints`.`house` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
@@ -191,3 +208,15 @@ INSERT INTO `housepoints`.`student_participates_in_Activity` (`Student_id`, `Act
 
 COMMIT;
 
+
+-- -----------------------------------------------------
+-- Data for table `housepoints`.`house_has_point_total`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `housepoints`;
+INSERT INTO `housepoints`.`house_has_point_total` (`house_id`, `date`, `point_total`) VALUES (1, 'November 1, 2015', 2100);
+INSERT INTO `housepoints`.`house_has_point_total` (`house_id`, `date`, `point_total`) VALUES (2, 'November 1, 2015', 3000);
+INSERT INTO `housepoints`.`house_has_point_total` (`house_id`, `date`, `point_total`) VALUES (3, 'November 1, 2015', 1700);
+INSERT INTO `housepoints`.`house_has_point_total` (`house_id`, `date`, `point_total`) VALUES (4, 'November 1, 2015', 1850);
+
+COMMIT;
