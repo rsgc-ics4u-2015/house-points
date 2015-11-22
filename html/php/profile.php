@@ -20,7 +20,30 @@
                 Westminster
             </div>
             <div class="points">
-                <span class="points" id="points1">438</span> points
+                <span class="points" id="points1">
+                
+<?php 
+            $connection = mysqli_connect($host, $user, $pass, $db, $port) or die(mysql_error());
+            $query = "SELECT * FROM student where id=5;";
+            $result = mysqli_query($connection, $query); 
+            
+            echo "<table>";
+            echo "<tr>";
+            echo "<th>";
+            echo "HP total";
+            echo "</th>";
+            echo "</tr>";
+            while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>";
+                    echo "<td>";
+                    echo $row['house_point_total'];
+                    echo "</td>";
+                    echo "</tr>";
+            }
+            echo "</table>";
+    ?>
+  
+  </span> points
             </div>
             <h3 class="extrac">Clubs & Teams</h3>
             <ul>
